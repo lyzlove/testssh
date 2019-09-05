@@ -8,7 +8,7 @@
 	git config --global  user.email "yuanzhenglu@126.com"
  
  ##
-	git add ./readme.md      打开git仓库门
+	git add ./readme.md      打开git仓库门 指定文件放在门口
 	git commit -m "我们完成了第一个功能！"   提交代码，-m "message"并给出提示信息
 
 ##这是第二个实现的功能
@@ -20,3 +20,8 @@
 
 ##这是第四个实现的功能
 入口文件创建  index.js
+
+##这是第五个个实现的功能
+##  一次多个文件传送，当前目录下的更改的所有文件
+	git add ./ e.md
+	git commit --all -m "一次性操作"
