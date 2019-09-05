@@ -5,7 +5,7 @@
  
 ## 用户信息配置
 	git config --global  user.name "lyz"
-	git config --global  user.mail "yuanzhenglu@126.com"
+	git config --global  user.email "yuanzhenglu@126.com"
  
  ##
 	git add ./readme.md      打开git仓库门
