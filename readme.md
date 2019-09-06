@@ -23,7 +23,7 @@
 
 ## 这是第五个个实现的功能
 ##  一次多个文件传送，当前目录下的更改的所有文件
-	git add . 
+	git add ./ 
 	git commit --all -m "一次性操作"
 	
 ##  查看日志信息
@@ -32,7 +32,7 @@
 	
 ## 这是个回滚测试
 	git reset --hard Head~0      		//回滚到哪里Head~0 最近一次提交，以此类推
-	git reset --hard Head 字符串版本号  	//回滚到哪里Head~0 最近一次提交，以此类推
+	git reset --hard Head 字符串版本号  	//回滚到哪里Head  字符串版本号
 	git reflog  						//可以查看每次切换版本的记录
 
 ## 分支
@@ -45,6 +45,24 @@
 	git branch -d dev				删除dev分支
 	
 ## GitHub  https://github.com (git服务器)
-	git push https://github.com/lyzlove/testdemo.git master
+	git push 地址 master
+		
+##  从服务器下载代码
+	新建一个文件夹  执行	git init 然后 git push
+	git push 地址 // 里面的master都是主分支，也可以其他分支
 	
+## git clone 地址 
+   第一次下载代码的时候可以直接克隆一个和服务器完全一样的代码
+   如果多次执行，每次都会把本地代码覆盖
+
+## ssh 方式上传代码
+	公钥，私钥 两种，首先生成两种钥匙  -t 加密方式 rsa
+	ssh-keygen -t rsa  -C "邮箱地址"
+	生成后再提示的生成地址中找到对应的公钥 id_rsa.pub, 文本打开复制里面的内容
+	然后进入进入git 服务器，点击右上角的图标，下拉框进入setting
+	然后设置 SSH and GPG keys ，新建 sshkey ,
+	标题自己定义，下面输入从公钥总复制的内容，然后保存，
+	保存后 download 中的use ssh 地址 就可以git push 上去了
+	
+	git push   ssh地址   master
 
