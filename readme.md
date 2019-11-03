@@ -85,4 +85,7 @@
 	
 	git push origin  -u master  		//把本地的分支提交到服务器代码中
 	git push 							//简化后只需要git push 就可以完成代码提交
+
+## pull
+
 	
